@@ -1,30 +1,32 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="min-h-screen flex flex-col">
+    <header class="bg-primary-blue text-white">
+      <div class="max-w-5xl mx-auto px-4 py-4 flex items-center gap-3">
+        <!-- Logo instead of U -->
+        <img
+          src="/src/assets/logo.png"
+          alt="HomeBase Logo"
+          class="w-9 h-9 object-contain rounded-xl bg-white p-1"
+        />
+        <h1 class="text-lg font-bold tracking-tight">HomeBase UCO</h1>
+        <span class="ml-auto text-sm opacity-80">
+          Residential Used Cooking Oil
+        </span>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <router-view />
+    </main>
+
+    <footer class="bg-primary-blueShade text-white/80 mt-16">
+      <div class="max-w-5xl mx-auto px-4 py-6 text-sm">
+        © Neutral Fuels — Home Collection Initiative
+      </div>
+    </footer>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<script setup>
+// no script needed here
+</script>
